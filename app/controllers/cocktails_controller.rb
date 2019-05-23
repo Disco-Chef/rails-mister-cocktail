@@ -25,10 +25,10 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require.(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name)
   end
 
   def find_cocktail
-    @cocktail = Restaurant.find(params[:id])
+    @cocktail = Cocktail.find(params[:id])
   end
 end
