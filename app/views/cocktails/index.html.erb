@@ -1,5 +1,10 @@
 <%= link_to "new cocktail", new_cocktail_path, class: "btn btn-primary" %>
-<% Cocktail.all.each do |cocktail| %>
-  <h2>Cocktail: <%= cocktail.name %></h2>
-  <%= link_to "View cocktail", cocktail_path(cocktail),  class: "btn btn-warning" %>
-<% end %>
+<h1>COCKTAILS GALORE!</h1>
+<div class="card-deck">
+  <% Cocktail.all.each do |cocktail| %>
+    <div class="card col-4" id="<%= cocktail.name.downcase.gsub(/ /,"") %>" >
+      <h2><%= cocktail.name %></h2>
+        <%= link_to "View cocktail", cocktail_path(cocktail),  class: "btn btn-warning" %>
+    </div>
+  <% end %>
+</div>
