@@ -1,12 +1,15 @@
 <% @dose = @cocktail.doses %>
 <h2>Cocktail: <%= @cocktail.name %></h2>
 <h2>Doses within:</h2>
-<p>
+<ul>
   <% @cocktail.doses.each do |dose|%>
-    <%= dose.description %>
-    <%= dose.ingredient %>
+    <li class="dose-items">
+      <%= dose.description %>
+      <%= dose.ingredient.name %>
+      <%= link_to "delete dose", dose_path(dose), method: 'delete', class: "btn btn-danger" %>
+    </li>
   <% end %>
-</p>
+</ul>
 
 <%= link_to "all cocktails", cocktails_path, class: "btn btn-primary" %>
 <%= link_to "add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-warning"  %>
