@@ -2,7 +2,7 @@ class CocktailsController < ApplicationController
   before_action :find_cocktail, only: [:show]
 
   def index
-    @cocktail = Cocktail.all
+    @cocktails = Cocktail.all
   end
 
   def show
