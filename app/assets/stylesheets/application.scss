@@ -15,21 +15,36 @@ h1 {
   text-align: center;
 }
 body {
-  background-color: #3a04f9;
+  background-color: lightgrey;
 }
 
-.card-deck {
+.cards-deck {
   width: 100%;
-}
-.cocktailbutton {
-  vertical-align: bottom;
+  display: flex;
 }
 .card {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   text-align: center;
   height: 239px;
+  border-radius: 5px;
+  flex-direction: column;
+  align-self: flex-end;
 }
-
 #moscowmule {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Moscow_Mule_at_Rye%2C_San_Francisco.jpg/1200px-Moscow_Mule_at_Rye%2C_San_Francisco.jpg");
 }
+
+.cocktailbutton {
+
+}
+.viewdetails{
+
+}
+// #darkandstormy {
+//   background-image: ;
+// }
+
+// #bloodymary {
+//   background-image: ;
+// }
+
